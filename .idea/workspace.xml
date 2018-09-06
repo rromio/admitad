@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87b3623c-8342-471b-9299-3bd9d4ce33a9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/optimum2.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tokens.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yandex_get_bids2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yandex_get_refresh_token.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yandex_get_reports.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yandex_refresher.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/admitad_api_auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oper.py" beforeDir="false" afterPath="$PROJECT_DIR$/oper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/optimum.csv" beforeDir="false" afterPath="$PROJECT_DIR$/optimum.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/records" beforeDir="false" afterPath="$PROJECT_DIR$/records" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yandex_get_bids.py" beforeDir="false" afterPath="$PROJECT_DIR$/yandex_get_bids.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yandex_get_keywords.py" beforeDir="false" afterPath="$PROJECT_DIR$/yandex_get_keywords.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,8 +25,8 @@
       <file leaf-file-name="admitad_api_auth.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admitad_api_auth.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="29" column="23" selection-start-line="29" selection-end-line="29" selection-end-column="23" />
+            <state relative-caret-position="275">
+              <caret line="28" column="83" selection-start-line="28" selection-start-column="83" selection-end-line="28" selection-end-column="83" />
               <folding>
                 <element signature="e#641#656#0" expanded="true" />
               </folding>
@@ -52,8 +37,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+            <state relative-caret-position="120">
+              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -129,6 +114,7 @@
         <option value="$PROJECT_DIR$/yandex_get_bids2.py" />
         <option value="$PROJECT_DIR$/yandex_refresher.py" />
         <option value="$PROJECT_DIR$/records" />
+        <option value="$PROJECT_DIR$/admitad_api_auth.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
@@ -725,8 +711,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admitad_api_auth.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="29" column="23" selection-start-line="29" selection-end-line="29" selection-end-column="23" />
+        <state relative-caret-position="275">
+          <caret line="28" column="83" selection-start-line="28" selection-start-column="83" selection-end-line="28" selection-end-column="83" />
           <folding>
             <element signature="e#641#656#0" expanded="true" />
           </folding>
@@ -735,8 +721,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        <state relative-caret-position="120">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
         </state>
       </provider>
     </entry>
