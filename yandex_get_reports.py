@@ -1,3 +1,5 @@
+# This Python file uses the following encoding: utf-8
+
 #ID: 9841e1fb3b0e411f8cfe6844ff68bd9f
 #Пароль: 79dad2e2b94b4c79a97c2ec8c833271f
 #Callback URL: https://oauth.yandex.ru/verification_code
@@ -8,25 +10,49 @@
 #https://api.direct.yandex.com/json/v5/keywords
 
 
+#ID: bc932f67b5ab4ad6aecd323c6bef8731
+#Пароль: d7b22557594b46a7a9a5d1520b99b6c9
+#token: AQAAAAAaB6b0AAUsztQbPOdymkXroJSYLCmo6iQ
+#login: admitad-2f0cabf73bde2e7b088c4a
+
+
 import json
 import requests
+import csv
+
+
+#Получаем данные из яндекса
 
 token = 'AQAAAAAaB6b0AAUsztQbPOdymkXroJSYLCmo6iQ'
 login = 'admitad-2f0cabf73bde2e7b088c4a'
-url = 'https://api-sandbox.direct.yandex.com/json/v5/keywords'
+url = 'https://api.direct.yandex.com/json/v5/reports'
 headers = {'Authorization' : 'Bearer ' + token, 'Accept-Language' : 'ru', 'Client-Login' : login, 'Content-Type' : 'application/json; charset=utf-8'}
 data = json.dumps({
-    "method": "get",
-    "params": {"SelectionCriteria":{"CampaignIds":[284608]},"FieldNames":["Id", ]},
-})
+    "params": {
+      "SelectionCriteria": {
+        "Filter": [{
+          "Field": "CampaignId",
+          "Operator": "IN",
+          "Values": [ "36648094", ]
+        }]
+      },
+      "FieldNames": [ "CriteriaId", "Clicks", "Cost" ],
+      "ReportName": "Actual Data",
+      "ReportType": "CRITERIA_PERFORMANCE_REPORT",
+      "DateRangeType": "LAST_30_DAYS",
+      "Format": "TSV",
+      "IncludeVAT": "YES",
+      "IncludeDiscount": "YES"
+    }
+  })
 
 r = requests.post(url, headers = headers, data = data)
 
-print(str(r) + '111')
+#with open('data_file.json', 'w') as write_file:
+#    json.dump(r.json(), write_file)
+
+print(r)
 print(r.text)
-print(r.json())
+#print(r.json())
 
 
-#Загрузка в pandas выгрузки ключевых слов df1 = pandas.DataFrame([{'KeywordId': 123123, 'Bid': 400000}, {'KeywordId': 123124, 'Bid': 400000}])
-#Сворачивание в json списка ключевых слов со ставками df1.to_dict('records')
-# Кодирование тела запроса в JSON jsonBody = json.dumps(body, ensure_ascii=False).encode('utf8')

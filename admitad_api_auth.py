@@ -21,11 +21,12 @@ client_secret='1e864c069de6bac42e746488be3579'
 hdata = client_id + ':' + client_secret
 data_b64_encoded = b64encode(hdata.encode()).decode()
 
+print(data_b64_encoded)
+
 headers = {'Authorization':'Basic NTk2OWU0NjE2NjIxMmFhNzIwNGQ4MWI4ZjY5YzE3OjFlODY0YzA2OWRlNmJhYzQyZTc0NjQ4OGJlMzU3OQ==', 'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'}
 data = {'grant_type':'client_credentials', 'client_id':'5969e46166212aa7204d81b8f69c17', 'scope':'advcampaigns banners websites'}
 
 r = requests.post('https://api.admitad.com/token/', data = data, headers = headers)
-r2 = json.loads(r.text)
 
 #file = open('refresh_data.txt', 'w')
 #file.

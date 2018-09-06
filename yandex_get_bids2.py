@@ -28,7 +28,7 @@ import csv
 
 
 #Обрабатываем файл с рекомендуемыми ставками
-with open('/root/projects/admitad/optimum.csv', 'r') as optimum_file:
+with open('/root/projects/admitad/optimum2.csv', 'r') as optimum_file:
     optimum_price_list = list(csv.reader(optimum_file))
 
 keywordids_list = []
@@ -42,12 +42,12 @@ for line in optimum_price_list:
 with open('/root/projects/admitad/tokens.txt', 'r') as tokens_file:
     data_tokens = eval(tokens_file.read())
 
-token = data_tokens['access_token1']
+token = data_tokens['access_token2']
 
 
 
 #Получаем данные из яндекса
-login = 'admitad-2f0cabf73bde2e7b088c4a'
+login = 'webmaster12.1'
 url = 'https://api.direct.yandex.com/json/v5/keywordbids'
 headers = {'Authorization' : 'Bearer ' + token, 'Accept-Language' : 'ru', 'Client-Login' : login, 'Content-Type' : 'application/json; charset=utf-8'}
 data = json.dumps({
@@ -89,7 +89,6 @@ for i in data_bids['result']['KeywordBids']:
         new_bid = 0
         optimum_price = get_optimum_price(keywordid)
         if optimum_price != None:
-            #print('Полученные ставки для ' + str(keywordid) + ' при оптимуме ' + str(optimum_price) + ' :' + str(search))
             for i2 in auction_bid_items:
                 if i2['Price'] <= optimum_price:
                     if actual_bid < i2['Bid']:
@@ -123,13 +122,13 @@ if bid_list != []:
         }
     )
     r_set = requests.post(url, headers = headers, data = data_set)
-    with open('/root/projects/admitad/log.txt', 'a') as write_file:
+    with open('/root/projects/admitad/log2.txt', 'a') as write_file:
         write_file.write(str(r_set) + r_set.text + '\n')
         print(r_set)
         print(r_set.text)
         print(r_set.json())
 else:
-    with open('/root/projects/admitad/log.txt', 'a') as write_file:
+    with open('/root/projects/admitad/log2.txt', 'a') as write_file:
         write_file.write('No changes\n')
         print('No changes')
 
